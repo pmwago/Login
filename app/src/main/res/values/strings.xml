@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="title_activity_home">Home</string>
+    <string name="tab_text_1">REGISTER</string>
+    <string name="tab_text_2">PURCHASE</string>
+    <string name="tab_text_3">CHECKOUT</string>
+</resources>

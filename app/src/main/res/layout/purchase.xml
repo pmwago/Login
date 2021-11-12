@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/total"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/total"
+        android:id="@+id/priceTotal"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total"
+        >
+      <ImageView
+          android:id="@+id/tv"
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="50dp"
+          android:src="@drawable/tv" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="45dp"
+        android:id="@+id/spin1"
+        android:layout_toRightOf="@+id/tv"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price1"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="45dp"
+        android:text="15000"
+        android:layout_toRightOf="@+id/spin1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="buy"
+            android:id="@+id/btnBuy1"
+            android:layout_toRightOf="@+id/price1"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"/>
+
+      <ImageView
+          android:id="@+id/laptop"
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="50dp"
+          android:layout_below="@+id/tv"
+          android:src="@drawable/laptop" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/spin1"
+        android:layout_marginLeft="45dp"
+        android:id="@+id/spin2"
+        android:layout_toRightOf="@+id/laptop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price2"
+        android:layout_marginTop="74dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/price1"
+        android:text="40000"
+        android:layout_toRightOf="@+id/spin2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="buy"
+            android:id="@+id/btnBuy2"
+            android:layout_toRightOf="@+id/price2"
+            android:layout_below="@id/btnBuy1"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"/>
+
+      <ImageView
+          android:id="@+id/woofer"
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="50dp"
+          android:layout_below="@+id/laptop"
+          android:src="@drawable/woofer" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/spin2"
+        android:layout_marginLeft="45dp"
+        android:id="@+id/spin3"
+        android:layout_toRightOf="@+id/woofer"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price3"
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/price2"
+        android:text="5800"
+        android:layout_toRightOf="@+id/spin3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="buy"
+            android:id="@+id/btnBuy3"
+            android:layout_toRightOf="@+id/price2"
+            android:layout_below="@id/btnBuy2"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"/>
+      <ImageView
+          android:id="@+id/extension"
+          android:layout_width="70dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="50dp"
+          android:layout_below="@+id/woofer"
+          android:src="@drawable/extension" />
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="75dp"
+        android:layout_below="@+id/spin3"
+        android:layout_marginLeft="45dp"
+        android:id="@+id/spin4"
+        android:layout_toRightOf="@+id/extension"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price4"
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/price3"
+        android:text="400"
+        android:layout_toRightOf="@+id/spin4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="buy"
+            android:id="@+id/btnBuy4"
+            android:layout_toRightOf="@+id/price3"
+            android:layout_below="@id/btnBuy3"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"/>
+
+    <Button
+        android:id="@+id/purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/extension"
+        android:text="PURCHASE" />
+    </RelativeLayout>
+
+</RelativeLayout>
