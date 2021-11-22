@@ -1,5 +1,6 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,8 +28,8 @@ public class Purchase extends Fragment {
     private int totalPrice;
     private ImageView tv,woofer,laptop,extension;
     int tvPrice=15000,laptopPrice=40000,wooferPrice=5800,extensionPrice=400;
-    int spinVal1,spinVal2,spinVal3,spinVal4=0;
     int totalTv,totalLaptop,totalWoofer,totalExtension=0;
+    Button[] buttons = new Button[]{btnBuy1, btnBuy2, btnBuy3, btnBuy4};
     @Nullable
     @Override
 
@@ -54,7 +55,7 @@ public class Purchase extends Fragment {
         priceTotal=view.findViewById(R.id.priceTotal);
 
 
-        Integer[] items = new Integer[]{0,1,2,3,4,5};
+        Integer[] items = new Integer[]{0,1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20};
         ArrayAdapter<Integer> adapter1 = new ArrayAdapter<Integer>(getActivity(),android.R.layout.simple_spinner_item, items);
         spin1.setAdapter(adapter1);
         ArrayAdapter<Integer> adapter2 = new ArrayAdapter<Integer>(getActivity(),android.R.layout.simple_spinner_item, items);
@@ -63,62 +64,83 @@ public class Purchase extends Fragment {
         spin3.setAdapter(adapter3);
         ArrayAdapter<Integer> adapter4 = new ArrayAdapter<Integer>(getActivity(),android.R.layout.simple_spinner_item, items);
         spin4.setAdapter(adapter4);
+        btnBuy1.setOnClickListener(new View.OnClickListener() {
+            int check=1;
+                    @Override
+                    public void onClick(View view) {
+                        if (check==1) {
+                            btnBuy1.setBackgroundColor(Color.GREEN);
+                            totalTv = calculatePrice(Integer.parseInt(spin1.getSelectedItem().toString()), tvPrice);
+                            price1.setText(String.valueOf(totalTv));
+                            check=0;
+                        }
+                        else {
 
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tv.setBackgroundResource(R.color.green);
-                btnBuy1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        spinVal1=Integer.parseInt(spin1.getSelectedItem().toString());
-                        totalTv=calculatePrice(spinVal1,tvPrice);
-                        price1.setText(String.valueOf(totalTv));
+                            btnBuy1.setBackgroundColor(Color.BLUE);
+                         totalTv=0;
+                         spin1.setSelection(0);
+                         price1.setText(String.valueOf(tvPrice));
+                         check=1;
+                        }
                     }
                 });
+
+        btnBuy2.setOnClickListener(new View.OnClickListener() {
+            int check=1;
+            @Override
+            public void onClick(View view) {
+                if (check==1) {
+                    btnBuy2.setBackgroundColor(Color.GREEN);
+                    totalLaptop = calculatePrice(Integer.parseInt(spin2.getSelectedItem().toString()),laptopPrice);
+                    price2.setText(String.valueOf(totalLaptop));
+                    check=0;
+                }
+                else {
+                    btnBuy2.setBackgroundColor(Color.BLUE);
+                    totalLaptop=0;
+                    spin2.setSelection(0);
+                    price2.setText(String.valueOf(laptopPrice));
+                    check=1;
+                }
             }
         });
-        laptop.setOnClickListener(new View.OnClickListener() {
+        btnBuy3.setOnClickListener(new View.OnClickListener() {
+            int check=1;
             @Override
             public void onClick(View view) {
-                laptop.setBackgroundResource(R.color.green);
-                btnBuy2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        spinVal2=Integer.parseInt(spin2.getSelectedItem().toString());
-                         totalLaptop=calculatePrice(spinVal2,laptopPrice);
-                        price2.setText(String.valueOf(totalLaptop));
-                    }
-                });
+                if (check==1) {
+                    btnBuy3.setBackgroundColor(Color.GREEN);
+                    totalWoofer = calculatePrice(Integer.parseInt(spin3.getSelectedItem().toString()), wooferPrice);
+                    price3.setText(String.valueOf(totalWoofer));
+                    check=0;
+                }
+                else {
+                    btnBuy3.setBackgroundColor(Color.BLUE);
+                    totalWoofer=0;
+                    spin3.setSelection(0);
+                    price3.setText(String.valueOf(wooferPrice));
+                    check=1;
+                }
             }
         });
 
-        woofer.setOnClickListener(new View.OnClickListener() {
+        btnBuy4.setOnClickListener(new View.OnClickListener() {
+            int check=1;
             @Override
             public void onClick(View view) {
-                woofer.setBackgroundResource(R.color.green);
-                btnBuy3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        spinVal3=Integer.parseInt(spin3.getSelectedItem().toString());
-                       totalWoofer=calculatePrice(spinVal3,wooferPrice);
-                        price3.setText(String.valueOf(totalWoofer));
-                    }
-                });
-            }
-        });
-        extension.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                extension.setBackgroundResource(R.color.green);
-                btnBuy4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        spinVal4=Integer.parseInt(spin4.getSelectedItem().toString());
-                        totalExtension=calculatePrice(spinVal4,extensionPrice);
-                        price4.setText(String.valueOf(totalExtension));
-                    }
-                });
+                if (check==1) {
+                    btnBuy4.setBackgroundColor(Color.GREEN);
+                    totalExtension = calculatePrice(Integer.parseInt(spin4.getSelectedItem().toString()), extensionPrice);
+                    price4.setText(String.valueOf(totalExtension));
+                    check=0;
+                }
+                else {
+                    btnBuy4.setBackgroundColor(Color.BLUE);
+                    totalExtension=0;
+                    spin4.setSelection(0);
+                    price4.setText(String.valueOf(extensionPrice));
+                    check=1;
+                }
             }
         });
 
@@ -136,6 +158,7 @@ public class Purchase extends Fragment {
         int subTotalPrice=quantity*price;
         return subTotalPrice;
     }
+
     public int totalPrice(){
         return  totalPrice=totalExtension+totalLaptop+totalWoofer+totalTv;
     }
