@@ -12,173 +12,179 @@
         android:layout_marginLeft="30dp"
         android:id="@+id/total"
         />
+
     <TextView
+        android:id="@+id/priceTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textSize="30sp"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
         android:layout_toRightOf="@+id/total"
-        android:id="@+id/priceTotal"
-        />
+        android:text="0.00"
+        android:textSize="30sp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/total"
-        >
-      <ImageView
-          android:id="@+id/tv"
-          android:layout_width="70dp"
-          android:layout_height="50dp"
-          android:layout_marginTop="50dp"
-          android:src="@drawable/tv" />
+        android:layout_below="@+id/total">
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="45dp"
-        android:id="@+id/spin1"
-        android:layout_toRightOf="@+id/tv"/>
+        <ImageView
+            android:id="@+id/tv"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/tv" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price1"
-        android:layout_marginTop="65dp"
-        android:layout_marginLeft="45dp"
-        android:text="15000"
-        android:layout_toRightOf="@+id/spin1"/>
-        <Button
+        <Spinner
+            android:id="@+id/spin1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="buy"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/tv"
+            android:spinnerMode="dropdown" />
+
+
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@+id/spin1"
+            android:text="15000" />
+
+        <Button
             android:id="@+id/btnBuy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
             android:layout_toRightOf="@+id/price1"
+            android:text="buy" />
+
+        <ImageView
+            android:id="@+id/laptop"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="25dp"/>
+            android:src="@drawable/laptop" />
 
-      <ImageView
-          android:id="@+id/laptop"
-          android:layout_width="70dp"
-          android:layout_height="50dp"
-          android:layout_marginTop="50dp"
-          android:layout_below="@+id/tv"
-          android:src="@drawable/laptop" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/spin1"
-        android:layout_marginLeft="45dp"
-        android:id="@+id/spin2"
-        android:layout_toRightOf="@+id/laptop"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price2"
-        android:layout_marginTop="74dp"
-        android:layout_marginLeft="45dp"
-        android:layout_below="@id/price1"
-        android:text="40000"
-        android:layout_toRightOf="@+id/spin2"/>
-        <Button
+        <Spinner
+            android:id="@+id/spin2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="buy"
+            android:layout_below="@+id/spin1"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="70dp"
+            android:layout_toRightOf="@+id/laptop"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price1"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="74dp"
+            android:layout_toRightOf="@+id/spin2"
+            android:text="40000" />
+
+        <Button
             android:id="@+id/btnBuy2"
-            android:layout_toRightOf="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/btnBuy1"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="25dp"/>
-
-      <ImageView
-          android:id="@+id/woofer"
-          android:layout_width="70dp"
-          android:layout_height="50dp"
-          android:layout_marginTop="50dp"
-          android:layout_below="@+id/laptop"
-          android:src="@drawable/woofer" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="74dp"
-        android:layout_below="@+id/spin2"
-        android:layout_marginLeft="45dp"
-        android:id="@+id/spin3"
-        android:layout_toRightOf="@+id/woofer"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price3"
-        android:layout_marginTop="78dp"
-        android:layout_marginLeft="45dp"
-        android:layout_below="@id/price2"
-        android:text="5800"
-        android:layout_toRightOf="@+id/spin3"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="buy"
-            android:id="@+id/btnBuy3"
             android:layout_toRightOf="@+id/price2"
-            android:layout_below="@id/btnBuy2"
+            android:text="buy" />
+
+        <ImageView
+            android:id="@+id/woofer"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/laptop"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="25dp"/>
-      <ImageView
-          android:id="@+id/extension"
-          android:layout_width="70dp"
-          android:layout_height="50dp"
-          android:layout_marginTop="50dp"
-          android:layout_below="@+id/woofer"
-          android:src="@drawable/extension" />
+            android:src="@drawable/woofer" />
 
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_marginTop="75dp"
-        android:layout_below="@+id/spin3"
-        android:layout_marginLeft="45dp"
-        android:id="@+id/spin4"
-        android:layout_toRightOf="@+id/extension"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price4"
-        android:layout_marginTop="78dp"
-        android:layout_marginLeft="45dp"
-        android:layout_below="@id/price3"
-        android:text="400"
-        android:layout_toRightOf="@+id/spin4"/>
-        <Button
+        <Spinner
+            android:id="@+id/spin3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="buy"
-            android:id="@+id/btnBuy4"
-            android:layout_toRightOf="@+id/price3"
-            android:layout_below="@id/btnBuy3"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="25dp"/>
+            android:layout_below="@+id/spin2"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="74dp"
+            android:layout_toRightOf="@+id/woofer"
+            android:spinnerMode="dropdown" />
 
-    <Button
-        android:id="@+id/purchase"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/extension"
-        android:text="PURCHASE" />
+        <TextView
+            android:id="@+id/price3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price2"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="78dp"
+            android:layout_toRightOf="@+id/spin3"
+            android:text="5800" />
+
+        <Button
+            android:id="@+id/btnBuy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBuy2"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/price2"
+            android:text="buy" />
+
+        <ImageView
+            android:id="@+id/extension"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/woofer"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/extension" />
+
+
+        <Spinner
+            android:id="@+id/spin4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spin3"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="75dp"
+            android:layout_toRightOf="@+id/extension"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/price4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price3"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="78dp"
+            android:layout_toRightOf="@+id/spin4"
+            android:text="400" />
+
+        <Button
+            android:id="@+id/btnBuy4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBuy3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/price3"
+            android:text="buy" />
+
+        <Button
+            android:id="@+id/purchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/extension"
+            android:layout_marginTop="50dp"
+            android:text="PURCHASE" />
     </RelativeLayout>
 
 </RelativeLayout>
