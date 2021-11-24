@@ -64,6 +64,7 @@ public class Purchase extends Fragment {
         spin3.setAdapter(adapter3);
         ArrayAdapter<Integer> adapter4 = new ArrayAdapter<Integer>(getActivity(),android.R.layout.simple_spinner_item, items);
         spin4.setAdapter(adapter4);
+
         btnBuy1.setOnClickListener(new View.OnClickListener() {
             int check=1;
                     @Override
@@ -104,6 +105,7 @@ public class Purchase extends Fragment {
                 }
             }
         });
+
         btnBuy3.setOnClickListener(new View.OnClickListener() {
             int check=1;
             @Override
@@ -149,6 +151,8 @@ public class Purchase extends Fragment {
             public void onClick(View view) {
                priceTotal.setText(String.valueOf(totalPrice()));
             }
+
+
         });
 
 
